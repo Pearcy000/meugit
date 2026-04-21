@@ -257,7 +257,7 @@ farmtech-fase2/
 
 ## 🎥 Vídeo de Demonstração
 
-> 🔗 [Assista no YouTube]([https://youtube.com](https://youtu.be/HI2eLzcy9yc?si=-at021Tiq9GXzVad)/) ← *substitua pelo link real do vídeo*
+> 🔗 [Assista no YouTube] [https://youtu.be/HI2eLzcy9yc?si=-at021Tiq9GXzVad](https://youtu.be/HI2eLzcy9yc?si=zqyLu1pz5Kww3PzU)
 
 O vídeo demonstra:
 - Circuito funcionando no Wokwi
