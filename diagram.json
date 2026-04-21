@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "author": "FarmTech Solutions",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-v1",
+      "id": "esp32",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht22",
+      "top": -100,
+      "left": 220,
+      "attrs": { "humidity": "40", "temperature": "28" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr",
+      "top": 60,
+      "left": 220,
+      "attrs": { "lux": "500" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_n",
+      "top": -160,
+      "left": -120,
+      "attrs": { "color": "green", "label": "N" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_p",
+      "top": -100,
+      "left": -120,
+      "attrs": { "color": "green", "label": "P" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_k",
+      "top": -40,
+      "left": -120,
+      "attrs": { "color": "green", "label": "K" }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "rele",
+      "top": 180,
+      "left": 220,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_bomba",
+      "top": 180,
+      "left": 350,
+      "attrs": { "color": "blue", "label": "Bomba" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res_led",
+      "top": 200,
+      "left": 320,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    ["esp32:GND.1", "dht22:GND", "black", []],
+    ["esp32:3V3",   "dht22:VCC", "red",   []],
+    ["esp32:D4",    "dht22:SDA", "green", []],
+
+    ["esp32:GND.2", "ldr:GND",  "black", []],
+    ["esp32:3V3",   "ldr:VCC",  "red",   []],
+    ["esp32:D34",   "ldr:AO",   "yellow", []],
+
+    ["esp32:GND.3", "btn_n:2.l", "black", []],
+    ["esp32:D12",   "btn_n:1.l", "green", []],
+
+    ["esp32:GND.4", "btn_p:2.l", "black", []],
+    ["esp32:D13",   "btn_p:1.l", "green", []],
+
+    ["esp32:GND.5", "btn_k:2.l", "black", []],
+    ["esp32:D14",   "btn_k:1.l", "green", []],
+
+    ["esp32:GND.6", "rele:GND",  "black", []],
+    ["esp32:3V3",   "rele:VCC",  "red",   []],
+    ["esp32:D26",   "rele:IN",   "blue",  []],
+
+    ["rele:NO",     "res_led:1", "blue",  []],
+    ["res_led:2",   "led_bomba:A", "blue", []],
+    ["led_bomba:C", "esp32:GND.7", "black", []]
+  ],
+  "dependencies": {}
+}
