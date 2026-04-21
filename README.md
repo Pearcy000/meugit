@@ -271,9 +271,8 @@ O vídeo demonstra:
 
 | Nome | RM |
 |------|----|
-| Integrante 1 | RM00000 |
-| Integrante 2 | RM00000 |
-| Integrante 3 | RM00000 |
+| Gabriel Fileto Di Capua da Silva | RM569179 |
+| Lucas Melo da Silva | RM569580 |
 
 ---
 
